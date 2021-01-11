@@ -1,5 +1,5 @@
-# Poker
-This is the final project for the CSS432 Computer Networking course at the University of Washington. It functions as a multiplayer game of Poker for up to 4 concurrent players who play against the dealer, a non-playing character. It is a C++ project that is designed where the game of Poker itself is run on a server application that listens for incoming packets from the client applications to establish a game, and communicate the various stages or phases of a game of Poker. My contribution for this project was in the game mechanics and core functionality found in the Server package. In addition to myself, there was one additional contributor who focused on the Client package for the project.
+# Blackjack
+This is the final project for the CSS432 Computer Networking course at the University of Washington. It functions as a multiplayer game of Blackjack for up to 4 concurrent players who play against the dealer, a non-playing character. It is a C++ project that is designed where the game of Blackjack itself is run on a server application that listens for incoming packets from the client applications to establish a game, and communicate the various stages or phases of a game of Blackjack. My contribution for this project was in the game mechanics and core functionality found in the Server package. In addition to myself, there was one additional contributor who focused on the Client package for the project.
 
 ## Requirements
 - Linux environment
