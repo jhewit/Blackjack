@@ -51,5 +51,3 @@ This is the final project for the CSS432 Computer Networking course at the Unive
     - If you have a lower sum, you lose your bet.
 
 Detailed rules of Blackjack can be found here: http://www.hitorstand.net/strategy.php
-
-To play the game, follow these steps:
