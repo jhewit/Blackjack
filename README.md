@@ -1,45 +1,55 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# Poker
+This is the final project for the CSS432 Computer Networking course at the University of Washington. It functions as a multiplayer game of Poker for up to 4 concurrent players who play against the dealer, a non-playing character. It is a C++ project that is designed where the game of Poker itself is run on a server application that listens for incoming packets from the client applications to establish a game, and communicate the various stages or phases of a game of Poker. My contribution for this project was in the game mechanics and core functionality found in the Server package. In addition to myself, there was one additional contributor who focused on the Client package for the project.
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+## Requirements
+- Linux environment
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+## Instructions for running
+1. Copy the Server package/folder to the desired Linux environment location
+2. Run `./build.sh` from the terminal/command line to compile the executable
+3. Run `./server` from the terminal/command line to launch the server
+4. Copy the Client package/folder to the desired Linux environment location
+5. Run `./build.sh` from the terminal/command line to compile the executable
+6. Run `./client <server_host_name>` from the terminal/command line to launch the client
 
----
+## How to Play
+1. Launch Server
+2. Launch Client with the specified Server hostand make sure it connects.
+3. When prompted for a username, type a name and press ‘enter’.
+4. You are now in the main menu. Type ‘-1’to create a new gameor type the id of an existing game in the listto join it.The game will wait until at least two players join.
+5. Once the game starts, you are prompted for a betbetween $2 and $10 dollars. If you wish to leave, type ‘-1’. Otherwise, type the bet amount.
+6. Once all players have made bets, the cards are dealt out. One player can perform actions while the others must wait.
+7. Once it is your turn, choose your desired action.
+8. After all players have finished their turns, the dealer plays.
+9. Finally, the round ends and the results are printed.
+10. The game goes to the next round, and you are onceagain prompted for a bet.
+11. To leave to main menu, type ‘-1’.
+12. To leave thegame and unregister, type ‘-1’.
+13. Close your Client.
 
-## Edit a file
+*NOTE: Leaving the game with ‘CTRL-C’ will not properly unregister the player. If you leave and try to reconnect with the same username, it will not let you. In these cases, the game will need to be exited and re-entered.*
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+### Rules of Blackjack:
+- Walk-in type game, where the player plays against the dealer only.
+- Each player starts with two cards.
+    - Dealer starts with one card facing down.
+- Goal of the game is to have a higher sum of cards than the dealer. 
+    - The maximum sum is 21, which is referred to as a Blackjack.
+    - Anything over 21, you bust, at which point your only chance of drawing the game is if the dealer also busts.
+- Card values:
+    - All number cards are worth their listed amount (ex. 7 of hearts = 7 points)
+    - All face cards are worth 10 (ex.king of diamonds= 10 points).
+    - Aces are worth either 1 or 11, depending on whether 11 causes you to bust.
+- Actions:
+    - Hit: add another card.
+    - Stand: end your turn.
+    - Double down: double your bet and receive one more card (if you feel confident that one more card will be enough).This can only be done as your first action.
+    - Surrender: get half of your bet back.
+- Outcomes:
+    - If you and the dealer tie (or both of you bust), you get your money back.
+    - If you have a higher sum, you doubleyour bet.
+    - If you have a lower sum, you lose your bet.
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+Detailed rules of Blackjack can be found here: http://www.hitorstand.net/strategy.php
 
----
-
-## Create a file
-
-Next, you’ll add a new file to this repository.
-
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
-
----
-
-## Clone a repository
-
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
-
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+To play the game, follow these steps:
